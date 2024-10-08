@@ -133,7 +133,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-80 shadow-lg z-50">
+    <nav class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-80 shadow-lg z-50 transition-all duration-300" id="navbar">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="#" class="text-orange-500 font-bold text-2xl">Hudabee</a>
             <div class="hidden md:flex space-x-4">
@@ -147,7 +147,7 @@
                 </button>
             </div>
         </div>
-        <div id="navbar-menu" class="md:hidden">
+        <div id="navbar-menu" class="md:hidden hidden">
             <div class="bg-gray-800">
                 <a href="#about" class="block text-white px-4 py-2 hover:text-orange-500 transition">About</a>
                 <a href="#projects" class="block text-white px-4 py-2 hover:text-orange-500 transition">Projects</a>
@@ -227,10 +227,10 @@
             navbarMenu.classList.toggle('hidden');
         });
 
-        // Parallax effect for projects section
+        // Parallax effect on scroll
         window.addEventListener('scroll', function () {
-            const parallax = document.querySelector('.parallax');
-            let offset = window.pageYOffset;
+            const parallax = document.querySelector('.projects-section');
+            const offset = window.pageYOffset;
             parallax.style.backgroundPositionY = offset * 0.7 + "px";
         });
     </script>
