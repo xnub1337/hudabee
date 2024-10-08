@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hudabee | Personal Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Body and Typography */
@@ -16,72 +16,6 @@
             color: #f1f1f1;
             background-color: #121212;
             overflow-x: hidden;
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        /* Fixed Navbar */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            max-width: 1200px;
-            margin: auto;
-            background-color: rgba(0, 0, 0, 0.8);
-            transition: background-color 0.5s ease;
-            z-index: 1000;
-            padding: 10px 30px;
-            height: 60px;
-        }
-
-        .navbar.scrolled {
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-
-        .navbar-nav .nav-link {
-            color: #f1f1f1;
-            margin-right: 20px;
-            font-size: 18px;
-        }
-
-        .navbar-brand {
-            color: #ff9800;
-            font-weight: bold;
-            font-size: 24px;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #ff9800;
-        }
-
-        .navbar-toggler {
-            border-color: #ff9800;
-        }
-
-        .navbar-toggler-icon {
-            background-color: #ff9800;
-        }
-
-        /* Social Media Icons */
-        .social-icons {
-            display: flex;
-            margin-left: auto;
-        }
-
-        .social-icons a {
-            color: #f1f1f1;
-            margin-left: 15px;
-            font-size: 20px;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: #ff9800;
         }
 
         /* Hero Section */
@@ -139,30 +73,6 @@
             background-image: url('https://i.ibb.co/mNsBvKW/Lyricorator34.jpg');
         }
 
-        /* Content Section */
-        .content-section {
-            padding: 80px 20px;
-            text-align: center;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        button {
-            padding: 15px 30px;
-            background-color: #ff9800;
-            border: none;
-            color: white;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: transform 0.3s;
-        }
-
-        button:hover {
-            transform: scale(1.1);
-            background-color: #e68a00;
-        }
-
         /* Footer */
         footer {
             padding: 30px;
@@ -194,16 +104,6 @@
 
         /* Responsive Styles */
         @media (max-width: 768px) {
-            .navbar {
-                padding: 10px 15px;
-                height: 50px;
-            }
-
-            .navbar-nav .nav-link {
-                font-size: 16px;
-                margin-right: 15px;
-            }
-
             .hero h1 {
                 font-size: 3rem;
             }
@@ -219,10 +119,6 @@
         }
 
         @media (max-width: 576px) {
-            .navbar-brand {
-                font-size: 20px;
-            }
-
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -237,24 +133,25 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Hudabee</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                </div>
+    <nav class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-80 shadow-lg z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-orange-500 font-bold text-2xl">Hudabee</a>
+            <div class="hidden md:flex space-x-4">
+                <a href="#about" class="text-white hover:text-orange-500 transition">About</a>
+                <a href="#projects" class="text-white hover:text-orange-500 transition">Projects</a>
+                <a href="#contact" class="text-white hover:text-orange-500 transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="navbar-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="navbar-menu" class="md:hidden">
+            <div class="bg-gray-800">
+                <a href="#about" class="block text-white px-4 py-2 hover:text-orange-500 transition">About</a>
+                <a href="#projects" class="block text-white px-4 py-2 hover:text-orange-500 transition">Projects</a>
+                <a href="#contact" class="block text-white px-4 py-2 hover:text-orange-500 transition">Contact</a>
             </div>
         </div>
     </nav>
@@ -269,34 +166,34 @@
     </section>
 
     <!-- About Section -->
-    <section class="content-section" id="about">
-        <h2>About Me</h2>
-        <p>Hey All, I'm Hudabee. I'm a 2nd year student studying B.Tech in Artificial Intelligence and Data Science.</p>
-        <p>I'm passionate about using technology to solve real-world problems and make a positive impact on society.</p>
+    <section class="content-section py-20 px-4" id="about">
+        <h2 class="text-4xl text-center mb-4">About Me</h2>
+        <p class="text-center">Hey All, I'm Hudabee. I'm a 2nd year student studying B.Tech in Artificial Intelligence and Data Science.</p>
+        <p class="text-center">I'm passionate about using technology to solve real-world problems and make a positive impact on society.</p>
     </section>
 
     <!-- Projects Section with Parallax Effect -->
     <section class="parallax projects-section" id="projects">
         <div class="content-section">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="#" style="color: #ff9800;">My Super Duper Project</a></li>
-                <li><a href="#" style="color: #ff9800;">A Great Project Arise</a></li>
+            <h2 class="text-4xl text-center mb-4">Projects</h2>
+            <ul class="text-center">
+                <li><a href="#" class="text-orange-500">My Super Duper Project</a></li>
+                <li><a href="#" class="text-orange-500">A Great Project Arise</a></li>
             </ul>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="content-section" id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <label for="name" style="color: #f1f1f1;">Name:</label><br>
-            <input type="text" id="name" name="name" required class="form-control"><br><br>
-            <label for="email" style="color: #f1f1f1;">Email:</label><br>
-            <input type="email" id="email" name="email" required class="form-control"><br><br>
-            <label for="message" style="color: #f1f1f1;">Message:</label><br>
-            <textarea id="message" name="message" rows="5" cols="50" required class="form-control"></textarea><br><br>
-            <button type="submit">Submit</button>
+    <section class="content-section py-20 px-4" id="contact">
+        <h2 class="text-4xl text-center mb-4">Contact Me</h2>
+        <form class="max-w-lg mx-auto">
+            <label for="name" class="block text-gray-300 mb-1">Name:</label>
+            <input type="text" id="name" name="name" required class="w-full p-2 mb-4 border border-gray-600 rounded bg-gray-800 text-white">
+            <label for="email" class="block text-gray-300 mb-1">Email:</label>
+            <input type="email" id="email" name="email" required class="w-full p-2 mb-4 border border-gray-600 rounded bg-gray-800 text-white">
+            <label for="message" class="block text-gray-300 mb-1">Message:</label>
+            <textarea id="message" name="message" rows="5" required class="w-full p-2 mb-4 border border-gray-600 rounded bg-gray-800 text-white"></textarea>
+            <button type="submit" class="w-full p-3 bg-orange-500 text-white rounded transition hover:bg-orange-600">Submit</button>
         </form>
     </section>
 
@@ -319,21 +216,19 @@
         <p>&copy; 2024 Hudabee. All rights reserved.</p>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tailwind and Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
     <script>
-        // Navbar color change on scroll
-        window.onscroll = function() {
-            const navbar = document.querySelector('.navbar');
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        };
+        // Toggle Navbar for Mobile
+        const toggleButton = document.getElementById('navbar-toggle');
+        const navbarMenu = document.getElementById('navbar-menu');
 
-        // Parallax effect
-        window.addEventListener('scroll', function() {
+        toggleButton.addEventListener('click', () => {
+            navbarMenu.classList.toggle('hidden');
+        });
+
+        // Parallax effect for projects section
+        window.addEventListener('scroll', function () {
             const parallax = document.querySelector('.parallax');
             let offset = window.pageYOffset;
             parallax.style.backgroundPositionY = offset * 0.7 + "px";
