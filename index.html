@@ -75,31 +75,50 @@
 
         /* Footer */
         footer {
-            padding: 30px;
-            background-color: #121212;
+            background-color: #1e1e1e;
+            padding: 60px 20px;
             color: #f1f1f1;
-            text-align: center;
-            max-width: 1200px;
-            margin: auto;
         }
 
         .footer-container {
             display: flex;
             justify-content: space-around;
-            padding: 20px 0;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
         }
 
         .footer-box {
-            background-color: #1e1e1e;
+            background-color: #2a2a2a;
             border-radius: 10px;
             padding: 20px;
-            flex: 1;
-            margin: 0 10px;
+            flex: 1 1 200px;
+            margin: 10px;
             transition: transform 0.3s;
         }
 
         .footer-box:hover {
             transform: translateY(-5px);
+        }
+
+        .footer-box h3 {
+            margin-bottom: 10px;
+            color: #ff9800;
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .footer-icons a {
+            margin: 0 10px;
+            color: #f1f1f1;
+            transition: color 0.3s;
+        }
+
+        .footer-icons a:hover {
+            color: #ff9800;
         }
 
         /* Responsive Styles */
@@ -124,7 +143,7 @@
             }
 
             .footer-box {
-                padding: 10px;
+                padding: 15px;
             }
         }
     </style>
@@ -218,18 +237,27 @@
         <div class="footer-container">
             <div class="footer-box">
                 <h3>About</h3>
-                <p>Learn more about my journey in tech.</p>
+                <p>Learn more about my journey and skills.</p>
+                <div class="footer-icons">
+                    <a href="#about"><i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
             <div class="footer-box">
                 <h3>Projects</h3>
                 <p>Check out my projects and contributions.</p>
+                <div class="footer-icons">
+                    <a href="#projects"><i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
             <div class="footer-box">
                 <h3>Contact</h3>
                 <p>Get in touch with me through various platforms.</p>
+                <div class="footer-icons">
+                    <a href="#contact"><i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
-        <p>&copy; 2024 Hudabee</p>
+        <p class="text-center">&copy; 2024 Hudabee</p>
     </footer>
 
     <!-- Bootstrap JS -->
@@ -254,7 +282,6 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
                 const target = document.querySelector(this.getAttribute('href'));
                 target.scrollIntoView({
                     behavior: 'smooth'
