@@ -3,87 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hudabee | My Homepage</title>
+  <title>Hudabee | Goonies Inspired Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    /* Body and Typography */
     body {
-      background-color: #121212;
-      color: #f1f1f1;
-      font-family: 'Arial', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      color: #f1f1f1;
+      background-color: #121212;
+      overflow-x: hidden;
     }
 
-    /* Navbar */
+    h1, h2, h3 {
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* Fixed Navbar */
     .navbar {
-      background-color: #1e1e1e;
       position: fixed;
+      top: 0;
       width: 100%;
+      background-color: transparent;
+      transition: background-color 0.5s ease;
       z-index: 1000;
+    }
+
+    .navbar.scrolled {
+      background-color: #000;
     }
 
     .navbar-nav .nav-link {
       color: #f1f1f1;
-      margin-right: 15px;
-    }
-
-    .navbar-nav .nav-link:hover {
-      color: #ff9800;
+      margin-right: 20px;
+      font-size: 18px;
     }
 
     /* Hero Section */
     .hero {
       height: 100vh;
-      background: url('https://i.ibb.co/gTZ2WhS/95688.jpg') no-repeat center center/cover;
+      background-image: url('https://i.ibb.co/gTZ2WhS/95688.jpg');
+      background-size: cover;
+      background-position: center;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+      position: relative;
       color: white;
     }
 
     .hero h1 {
-      font-size: 4rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      font-size: 5rem;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      animation: fadeIn 2s ease;
     }
 
-    /* Content Sections */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Parallax Section */
+    .parallax {
+      height: 100vh;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .projects-section {
+      background-image: url('https://i.ibb.co/mNsBvKW/Lyricorator34.jpg');
+    }
+
+    /* Content Section */
     .content-section {
-      padding: 100px 20px;
+      padding: 80px 20px;
       text-align: center;
-      background: #1e1e1e;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-      margin: 20px;
     }
 
     button {
+      padding: 15px 30px;
       background-color: #ff9800;
-      color: white;
-      padding: 10px 20px;
       border: none;
-      border-radius: 5px;
+      color: white;
+      font-size: 1rem;
       cursor: pointer;
+      border-radius: 5px;
+      transition: transform 0.3s;
     }
 
     button:hover {
+      transform: scale(1.1);
       background-color: #e68a00;
     }
 
+    /* Footer */
     footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1e1e1e;
+      padding: 30px;
+      background-color: #121212;
       color: #f1f1f1;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Hudabee</a>
+      <a class="navbar-brand" href="#" style="color: white;">Hudabee</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
@@ -96,7 +134,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Welcome to my homepage!</h1>
+    <h1>Welcome to My Homepage!</h1>
   </section>
 
   <!-- About Section -->
@@ -104,17 +142,17 @@
     <h2>About Me</h2>
     <p>Hey All, I'm Hudabee. I'm a 2nd year student studying B.Tech in Artificial Intelligence and Data Science.</p>
     <p>I'm passionate about using technology to solve real-world problems and make a positive impact on society.</p>
-    <p>In my free time, I enjoy reading, playing video games, and exploring new technologies.</p>
   </section>
 
-  <!-- Projects Section -->
-  <section class="content-section" id="projects">
-    <h2>Projects</h2>
-    <ul class="list-unstyled">
-      <li><a href="#" style="color: #ff9800;">My super duper project</a></li>
-      <li><a href="#" style="color: #ff9800;">A great project arise</a></li>
-      <li><a href="#" style="color: #ff9800;">Huh, I'm thinking to add a new project here!</a></li>
-    </ul>
+  <!-- Projects Section with Parallax Effect -->
+  <section class="parallax projects-section" id="projects">
+    <div class="content-section">
+      <h2>Projects</h2>
+      <ul>
+        <li><a href="#" style="color: #ff9800;">My Super Duper Project</a></li>
+        <li><a href="#" style="color: #ff9800;">A Great Project Arise</a></li>
+      </ul>
+    </div>
   </section>
 
   <!-- Contact Section -->
@@ -131,10 +169,20 @@
     </form>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2024 Hudabee</p>
   </footer>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Navbar color change on scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+
 </body>
 </html>
