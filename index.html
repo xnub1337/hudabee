@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="/CSS/poly.css">
     <script src="poly.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -21,12 +22,6 @@
             background-color: #121212;
             overflow-x: hidden;
             position: relative;
-            scroll-behavior: smooth; /* Enable smooth scrolling */
-        }
-
-        /* Navbar */
-        nav {
-            padding: 10px 0; /* Add some padding for aesthetics */
         }
 
         /* Hero Section */
@@ -80,15 +75,7 @@
             z-index: 1;
         }
 
-        .about-section {
-            background-image: url('https://i.ibb.co/mNsBvKW/Lyricorator34.jpg');
-        }
-
         .projects-section {
-            background-image: url('https://i.ibb.co/mNsBvKW/Lyricorator34.jpg');
-        }
-
-        .contact-section {
             background-image: url('https://i.ibb.co/mNsBvKW/Lyricorator34.jpg');
         }
 
@@ -176,18 +163,13 @@
             height: 100%;
             z-index: 0;
         }
-
-        /* Padding for sections below the navbar */
-        .content-section {
-            padding-top: 70px; /* Adjust as necessary for navbar height */
-        }
     </style>
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-80 shadow-lg z-10 transition-all duration-300" id="navbar">
+    <nav class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-80 shadow-lg z-50 transition-all duration-300" id="navbar">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="#" class="text-orange-500 font-bold text-2xl">Hudabee</a>
             <div class="hidden md:flex space-x-4">
@@ -219,15 +201,15 @@
         <h1>Welcome to the world of HudaBee!</h1>
     </section>
 
-    <!-- About Section with Parallax Effect -->
-    <section class="parallax about-section content-section" id="about">
+    <!-- About Section -->
+    <section class="content-section py-20 px-4" id="about">
         <h2 class="text-4xl text-center mb-4">About Me</h2>
         <p class="text-center">Hey All, I'm Hudabee. I'm a 2nd year student studying B.Tech in Artificial Intelligence and Data Science.</p>
         <p class="text-center">I'm passionate about using technology to solve real-world problems and make a positive impact on society.</p>
     </section>
 
     <!-- Projects Section with Parallax Effect -->
-    <section class="parallax projects-section content-section" id="projects">
+    <section class="parallax projects-section" id="projects">
         <div class="content-section">
             <h2 class="text-4xl text-center mb-4">Projects</h2>
             <ul class="text-center">
@@ -237,8 +219,8 @@
         </div>
     </section>
 
-    <!-- Contact Section with Parallax Effect -->
-    <section class="parallax contact-section content-section" id="contact">
+    <!-- Contact Section -->
+    <section class="content-section py-20 px-4" id="contact">
         <h2 class="text-4xl text-center mb-4">Contact Me</h2>
         <form class="max-w-lg mx-auto">
             <label for="name" class="block text-gray-300 mb-1">Name:</label>
@@ -246,46 +228,191 @@
             <label for="email" class="block text-gray-300 mb-1">Email:</label>
             <input type="email" id="email" name="email" required class="w-full p-2 mb-4 border border-gray-600 rounded bg-gray-800 text-white">
             <label for="message" class="block text-gray-300 mb-1">Message:</label>
-            <textarea id="message" name="message" required class="w-full p-2 mb-4 border border-gray-600 rounded bg-gray-800 text-white"></textarea>
-            <button type="submit" class="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-400 transition">Send</button>
+            <textarea id="message" name="message" rows="5" required class="w-full p-2 mb-4 border border-gray-600 rounded bg-gray-800 text-white"></textarea>
+            <button type="submit" class="w-full p-3 bg-orange-500 text-white rounded transition hover:bg-orange-600">Submit</button>
         </form>
     </section>
 
+    <!-- Social Media Icons -->
+    <div class="flex justify-center space-x-4 py-4">
+        <a href="https://facebook.com" target="_blank" class="text-gray-400 hover:text-blue-600">
+            <i class="fab fa-facebook-f fa-2x"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="text-gray-400 hover:text-blue-400">
+            <i class="fab fa-twitter fa-2x"></i>
+        </a>
+        <a href="https://github.com" target="_blank" class="text-gray-400 hover:text-gray-500">
+            <i class="fab fa-github fa-2x"></i>
+        </a>
+    </div>
+
     <!-- Footer -->
     <footer>
-        <div id="particles-js"></div>
-        <div class="footer-container">
+        <div id="particles-js"></div> <!-- Particles.js container -->
+        <div class="footer-container relative z-10"> <!-- Relative z-index for footer content -->
             <div class="footer-box">
-                <h3>About Me</h3>
-                <p>A passionate learner and tech enthusiast.</p>
+                <h3>About</h3>
+                <p>Learn more about my journey and skills.</p>
+                <div class="footer-icons">
+                    <a href="#about"><i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
             <div class="footer-box">
-                <h3>Links</h3>
-                <a href="#" class="text-white">GitHub</a><br>
-                <a href="#" class="text-white">LinkedIn</a>
+                <h3>Projects</h3>
+                <p>Check out my projects and contributions.</p>
+                <div class="footer-icons">
+                    <a href="#projects"><i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
             <div class="footer-box">
                 <h3>Contact</h3>
-                <p>Email: <a href="mailto:hudabee@example.com" class="text-white">hudabee@example.com</a></p>
+                <p>Get in touch with me through various platforms.</p>
+                <div class="footer-icons">
+                    <a href="#contact"><i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
-        <div class="footer-icons">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
+        <p class="text-center">&copy; 2024 Hudabee</p>
     </footer>
 
     <script>
-        // Particles.js configuration
-        particlesJS.load('particles-js', 'particles.json', function () {
-            console.log('callback - particles.js config loaded');
+        // Initialize particles.js
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 5,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
         });
 
-        // Navbar toggle for mobile
-        document.getElementById('navbar-toggle').onclick = function () {
-            var menu = document.getElementById('navbar-menu');
-            menu.classList.toggle('hidden');
-        };
+        // Toggle navbar on mobile
+        const navbarToggle = document.getElementById('navbar-toggle');
+        const navbarMenu = document.getElementById('navbar-menu');
+
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('hidden');
+        });
+
+        // Parallax effect on scroll
+        window.addEventListener('scroll', function () {
+            const parallax = document.querySelector('.projects-section');
+            const offset = window.pageYOffset;
+            parallax.style.backgroundPositionY = offset * 0.7 + "px";
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 
