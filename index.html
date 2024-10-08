@@ -9,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-    <link rel="stylesheet" href="/CSS/poly.css">
     <script src="poly.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -73,10 +72,6 @@
             color: white;
             position: relative;
             z-index: 1;
-        }
-        
-        .about-section {
-            background-image: url('https://i.ibb.co/mNsBvKW/Lyricorator34.jpg');
         }
 
         .projects-section {
@@ -173,7 +168,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-80 shadow-lg z-50 transition-all duration-300" id="navbar">
+    <nav class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-80 shadow-lg z-10 transition-all duration-300" id="navbar">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="#" class="text-orange-500 font-bold text-2xl">Hudabee</a>
             <div class="hidden md:flex space-x-4">
@@ -205,8 +200,8 @@
         <h1>Welcome to the world of HudaBee!</h1>
     </section>
 
-    <!-- About Section with Parallax Effect -->
-    <section class="parallax about-section content-section" id="about">
+    <!-- About Section -->
+    <section class="content-section py-20 px-4" id="about">
         <h2 class="text-4xl text-center mb-4">About Me</h2>
         <p class="text-center">Hey All, I'm Hudabee. I'm a 2nd year student studying B.Tech in Artificial Intelligence and Data Science.</p>
         <p class="text-center">I'm passionate about using technology to solve real-world problems and make a positive impact on society.</p>
