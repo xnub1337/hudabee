@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/CSS/poly.css">
     <script src="poly.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https:https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <style>
         /* Body and Typography */
         body {
@@ -81,6 +81,7 @@
 
         /* Footer */
         footer {
+            position: relative;
             background-color: #1e1e1e;
             padding: 60px 20px;
             color: #f1f1f1;
@@ -151,6 +152,16 @@
             .footer-box {
                 padding: 15px;
             }
+        }
+
+        /* Particles.js container */
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
         }
     </style>
 </head>
@@ -237,7 +248,8 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-container">
+        <div id="particles-js"></div> <!-- Particles.js container -->
+        <div class="footer-container relative z-10"> <!-- Relative z-index for footer content -->
             <div class="footer-box">
                 <h3>About</h3>
                 <p>Learn more about my journey and skills.</p>
@@ -259,27 +271,123 @@
                     <a href="#contact"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-        </div> 
-        <div class="footer-container">
-            <div id="particles-js">
-  <div class="container">
-    <div class="row top">
-      <div class="twelve column">
-        <div class="logo">HB</div>
-        <h1>HudaBee</h1>
-        <h2> Web Developer</h2>
-      </div>
-    </div>
-
-    <div class="container ">
-  <div class="footer">
-  <p>Made using the awesome </p> </div></div>
-  </div>
         </div>
         <p class="text-center">&copy; 2024 Hudabee</p>
     </footer>
 
     <script>
+        // Initialize particles.js
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 5,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
         // Toggle navbar on mobile
         const navbarToggle = document.getElementById('navbar-toggle');
         const navbarMenu = document.getElementById('navbar-menu');
