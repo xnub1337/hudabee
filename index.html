@@ -9,7 +9,7 @@
   <style>
     body {
       background-color: #121212; /* Dark background */
-      color: #e0e0e0; /* Light text color */
+      color: #f1f1f1; /* Light text */
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
@@ -17,7 +17,7 @@
 
     /* Navbar */
     .navbar {
-      background-color: #1f1f1f; /* Darker navbar */
+      background-color: #1e1e1e; /* Darker navbar */
       position: fixed;
       width: 100%;
       top: 0;
@@ -26,13 +26,13 @@
     }
 
     .navbar-nav .nav-link {
-      color: #e0e0e0; /* Light text color for links */
+      color: #f1f1f1;
       margin-right: 15px;
       transition: color 0.3s ease;
     }
 
     .navbar-nav .nav-link:hover {
-      color: #FFAB40; /* Amber color on hover */
+      color: #ff9800; /* Bright orange on hover */
     }
 
     /* Parallax section styling */
@@ -44,7 +44,7 @@
     }
 
     .hero {
-      background-image: url('https://i.ibb.co/gTZ2WhS/95688.jpg'); /* Cute cat image */
+      background-image: url('https://i.ibb.co/gTZ2WhS/95688.jpg'); /* Replace with your cute cat image */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -54,17 +54,18 @@
 
     .hero h1 {
       font-size: 5rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow for better readability */
     }
 
     /* General content styling */
     .content-section {
       padding: 100px 20px;
       text-align: center;
-      background: #1e1e1e; /* Darker section background */
+      background: #1e1e1e; /* Dark background for sections */
       border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Darker shadow */
       margin: 20px; /* Margin around sections */
+      color: #e0e0e0; /* Slightly brighter text color for readability */
     }
 
     /* Animations for GSAP */
@@ -75,7 +76,7 @@
 
     /* Hover effects for buttons */
     button {
-      background-color: #FFAB40; /* Amber button color */
+      background-color: #ff9800; /* Bright orange for buttons */
       color: white;
       padding: 10px 20px;
       border: none;
@@ -85,7 +86,7 @@
     }
 
     button:hover {
-      background-color: #FFC107; /* Lighter amber on hover */
+      background-color: #e68a00; /* Darker orange on hover */
       transform: scale(1.05);
     }
 
@@ -148,9 +149,9 @@
     <div class="content-section">
       <h2>Projects</h2>
       <ul class="list-unstyled">
-        <li><a href="#" style="color: #FFAB40;">My super duper project</a></li>
-        <li><a href="#" style="color: #FFAB40;">A great project arise</a></li>
-        <li><a href="#" style="color: #FFAB40;">Huh, I'm thinking to add a new project here!</a></li>
+        <li><a href="#" style="color: #ff9800;">My super duper project</a></li>
+        <li><a href="#" style="color: #ff9800;">A great project arise</a></li>
+        <li><a href="#" style="color: #ff9800;">Huh, I'm thinking to add a new project here!</a></li>
       </ul>
     </div>
   </section>
@@ -159,17 +160,17 @@
   <section class="content-section fade-in" id="contact">
     <h2>Contact Me</h2>
     <form>
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 10px;">
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 10px;">
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message" rows="5" cols="50" required style="width: 100%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 10px;"></textarea>
+      <label for="name" style="color: #f1f1f1;">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="email" style="color: #f1f1f1;">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="message" style="color: #f1f1f1;">Message:</label><br>
+      <textarea id="message" name="message" rows="5" cols="50" required></textarea><br><br>
       <button type="submit">Submit</button>
     </form>
   </section>
 
-  <footer class="text-center mt-4">
+  <footer class="text-center mt-4" style="color: #f1f1f1;">
     <p>&copy; 2024 Hudabee</p>
   </footer>
 
