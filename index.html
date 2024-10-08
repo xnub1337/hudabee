@@ -69,7 +69,6 @@
     /* Parallax Section */
     .parallax {
       height: 100vh;
-      background-attachment: fixed;
       background-size: cover;
       background-position: center;
       display: flex;
@@ -176,7 +175,20 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- JS Parallax Effect -->
   <script>
+    document.addEventListener("scroll", function() {
+      const parallaxSections = document.querySelectorAll('.parallax');
+      const scrollPosition = window.pageYOffset;
+
+      parallaxSections.forEach(section => {
+        const speed = 0.5;  // Adjust speed for more or less effect
+        const backgroundPosition = scrollPosition * speed;
+        section.style.backgroundPosition = `center ${backgroundPosition}px`;
+      });
+    });
+
     // Navbar color change on scroll
     window.addEventListener('scroll', function() {
       const navbar = document.querySelector('.navbar');
