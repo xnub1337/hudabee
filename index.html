@@ -26,11 +26,13 @@
       position: fixed;
       top: 0;
       width: 100%;
+      max-width: 1200px; /* Set a max-width for the navbar */
+      margin: auto; /* Center the navbar */
       background-color: rgba(0, 0, 0, 0.8);
       transition: background-color 0.5s ease;
       z-index: 1000;
       padding: 15px 30px; /* Adjusted padding for better size */
-      height: 80px; /* Adjusted navbar height */
+      height: 60px; /* Decreased height */
     }
 
     .navbar.scrolled {
@@ -138,6 +140,33 @@
       background-color: #121212;
       color: #f1f1f1;
       text-align: center;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 10px 15px; /* Smaller padding for mobile */
+        height: 50px; /* Decrease height on mobile */
+      }
+
+      .navbar-nav .nav-link {
+        font-size: 16px; /* Smaller font size for mobile */
+        margin-right: 15px; /* Reduce spacing */
+      }
+
+      .hero h1 {
+        font-size: 3rem; /* Reduce font size for hero text on mobile */
+      }
+    }
+
+    @media (max-width: 576px) {
+      .navbar-brand {
+        font-size: 20px; /* Even smaller font for mobile */
+      }
+
+      .hero h1 {
+        font-size: 2.5rem; /* Further reduce font size for very small screens */
+      }
     }
   </style>
 </head>
