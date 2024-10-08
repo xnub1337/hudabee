@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hudabee | Parallax Menu</title>
+  <title>Hudabee | Goonies Inspired Design</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
@@ -26,13 +26,13 @@
       position: fixed;
       top: 0;
       width: 100%;
-      max-width: 1200px;
-      margin: auto;
+      max-width: 1200px; /* Set a max-width for the navbar */
+      margin: auto; /* Center the navbar */
       background-color: rgba(0, 0, 0, 0.8);
       transition: background-color 0.5s ease;
       z-index: 1000;
-      padding: 10px 30px;
-      height: 60px;
+      padding: 10px 30px; /* Adjusted padding for better size */
+      height: 60px; /* Decreased height */
     }
 
     .navbar.scrolled {
@@ -43,17 +43,56 @@
       color: #f1f1f1;
       margin-right: 20px;
       font-size: 18px;
-      position: relative;
     }
 
     .navbar-brand {
       color: #ff9800;
       font-weight: bold;
-      font-size: 24px;
+      font-size: 24px; /* Adjusted font size */
     }
 
     .navbar-nav .nav-link:hover {
       color: #ff9800;
+    }
+
+    /* Navbar Toggler Icon */
+    .navbar-toggler {
+      border-color: #ff9800; /* Optional: change border color */
+    }
+    .navbar-toggler-icon {
+      background-color: #ff9800; /* Ensures the icon is visible */
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .hero h1 {
+      font-size: 5rem;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     /* Parallax Section */
@@ -66,8 +105,6 @@
       align-items: center;
       justify-content: center;
       color: white;
-      position: relative;
-      z-index: -1;
     }
 
     .projects-section {
@@ -78,32 +115,60 @@
     .content-section {
       padding: 80px 20px;
       text-align: center;
+      max-width: 1200px; /* Ensure content is aligned with navbar */
+      margin: auto; /* Center the content */
+    }
+
+    button {
+      padding: 15px 30px;
+      background-color: #ff9800;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: transform 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background-color: #e68a00;
+    }
+
+    /* Footer */
+    footer {
+      padding: 30px;
+      background-color: #121212;
+      color: #f1f1f1;
+      text-align: center;
+      max-width: 1200px; /* Ensure footer is aligned with navbar */
+      margin: auto; /* Center the footer */
     }
 
     /* Responsive Styles */
     @media (max-width: 768px) {
       .navbar {
-        padding: 10px 15px;
-        height: 50px;
+        padding: 10px 15px; /* Smaller padding for mobile */
+        height: 50px; /* Decrease height on mobile */
       }
 
       .navbar-nav .nav-link {
-        font-size: 16px;
-        margin-right: 15px;
+        font-size: 16px; /* Smaller font size for mobile */
+        margin-right: 15px; /* Reduce spacing */
       }
 
       .hero h1 {
-        font-size: 3rem;
+        font-size: 3rem; /* Reduce font size for hero text on mobile */
       }
     }
 
     @media (max-width: 576px) {
       .navbar-brand {
-        font-size: 20px;
+        font-size: 20px; /* Even smaller font for mobile */
       }
 
       .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Further reduce font size for very small screens */
       }
     }
   </style>
@@ -115,19 +180,12 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Hudabee</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon" style="background-color: #ff9800;"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" id="navbarDropdown" data-bs-toggle="dropdown">Projects</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Project 1</a></li>
-              <li><a class="dropdown-item" href="#">Project 2</a></li>
-              <li><a class="dropdown-item" href="#">Project 3</a></li>
-            </ul>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -143,17 +201,22 @@
     <h1>Welcome to My Homepage!</h1>
   </section>
 
-  <!-- Parallax Section -->
-  <section class="parallax projects-section" id="projects">
-    <div class="content-section">
-      <h2>Projects</h2>
-    </div>
-  </section>
-
   <!-- About Section -->
   <section class="content-section" id="about">
     <h2>About Me</h2>
     <p>Hey All, I'm Hudabee. I'm a 2nd year student studying B.Tech in Artificial Intelligence and Data Science.</p>
+    <p>I'm passionate about using technology to solve real-world problems and make a positive impact on society.</p>
+  </section>
+
+  <!-- Projects Section with Parallax Effect -->
+  <section class="parallax projects-section" id="projects">
+    <div class="content-section">
+      <h2>Projects</h2>
+      <ul>
+        <li><a href="#" style="color: #ff9800;">My Super Duper Project</a></li>
+        <li><a href="#" style="color: #ff9800;">A Great Project Arise</a></li>
+      </ul>
+    </div>
   </section>
 
   <!-- Contact Section -->
@@ -175,16 +238,15 @@
     <p>&copy; 2024 Hudabee</p>
   </footer>
 
-  <!-- Parallax JS Script -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    // Navbar color change on scroll
     window.addEventListener('scroll', function() {
-      let parallax = document.querySelector('.projects-section');
-      let scrollPosition = window.pageYOffset;
-      parallax.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
     });
   </script>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
