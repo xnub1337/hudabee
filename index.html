@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hudabee | My Homepage</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background-color: #121212; /* Dark background */
-      color: #f1f1f1; /* Light text */
+      background-color: #121212;
+      color: #f1f1f1;
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
@@ -17,34 +16,25 @@
 
     /* Navbar */
     .navbar {
-      background-color: #1e1e1e; /* Darker navbar */
+      background-color: #1e1e1e;
       position: fixed;
       width: 100%;
-      top: 0;
       z-index: 1000;
-      transition: background-color 0.3s;
     }
 
     .navbar-nav .nav-link {
       color: #f1f1f1;
       margin-right: 15px;
-      transition: color 0.3s ease;
     }
 
     .navbar-nav .nav-link:hover {
-      color: #ff9800; /* Bright orange on hover */
+      color: #ff9800;
     }
 
-    /* Parallax section styling */
-    .parallax {
-      height: 100vh;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-    }
-
+    /* Hero Section */
     .hero {
-      background-image: url('https://i.ibb.co/gTZ2WhS/95688.jpg'); /* Replace with your cute cat image */
+      height: 100vh;
+      background: url('https://i.ibb.co/gTZ2WhS/95688.jpg') no-repeat center center/cover;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -53,53 +43,38 @@
     }
 
     .hero h1 {
-      font-size: 5rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow for better readability */
+      font-size: 4rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
 
-    /* General content styling */
+    /* Content Sections */
     .content-section {
       padding: 100px 20px;
       text-align: center;
-      background: #1e1e1e; /* Dark background for sections */
+      background: #1e1e1e;
       border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Darker shadow */
-      margin: 20px; /* Margin around sections */
-      color: #e0e0e0; /* Slightly brighter text color for readability */
-      opacity: 0; /* Set initial opacity to 0 for fade effect */
-      transform: translateY(50px); /* Start slightly lower */
-      transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      margin: 20px;
     }
 
-    /* Hover effects for buttons */
     button {
-      background-color: #ff9800; /* Bright orange for buttons */
+      background-color: #ff9800;
       color: white;
       padding: 10px 20px;
       border: none;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      border-radius: 5px; /* Rounded corners */
-      font-size: 1rem; /* Button font size */
+      border-radius: 5px;
+      cursor: pointer;
     }
 
     button:hover {
-      background-color: #e68a00; /* Darker orange on hover */
-      transform: scale(1.05);
+      background-color: #e68a00;
     }
 
-    /* Smooth scroll */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 3rem;
-      }
-      .content-section {
-        padding: 50px 20px;
-      }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e1e1e;
+      color: #f1f1f1;
     }
   </style>
 </head>
@@ -109,156 +84,23 @@
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Hudabee</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        mail" name="email" required><br><br>
-      <label for="message" style="color: #f1f1f1;">Message:</label><br>
-      <textarea id="message" name="message" rows="5" cols="50" required></textarea><br><br>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-  <footer class="text-center mt-4" style="color: #f1f1f1;">
-    <p>&copy; 2024 Hudabee</p>
-  </footer>
-
-  <!-- GSAP Script for Animations -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudf<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hudabee | My Homepage</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <style>
-    body {
-      background-color: #121212; /* Dark background */
-      color: #f1f1f1; /* Light text */
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Navbar */
-    .navbar {
-      background-color: #1e1e1e; /* Darker navbar */
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      transition: background-color 0.3s;
-    }
-
-    .navbar-nav .nav-link {
-      color: #f1f1f1;
-      margin-right: 15px;
-      transition: color 0.3s ease;
-    }
-
-    .navbar-nav .nav-link:hover {
-      color: #ff9800; /* Bright orange on hover */
-    }
-
-    /* Parallax section styling */
-    .parallax {
-      height: 100vh;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .hero {
-      background-image: url('https://i.ibb.co/gTZ2WhS/95688.jpg'); /* Replace with your cute cat image */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-    }
-
-    .hero h1 {
-      font-size: 5rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow for better readability */
-    }
-
-    /* General content styling */
-    .content-section {
-      padding: 100px 20px;
-      text-align: center;
-      background: #1e1e1e; /* Dark background for sections */
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Darker shadow */
-      margin: 20px; /* Margin around sections */
-      color: #e0e0e0; /* Slightly brighter text color for readability */
-      opacity: 0; /* Set initial opacity to 0 for fade effect */
-      transform: translateY(50px); /* Start slightly lower */
-    }
-
-    /* Hover effects for buttons */
-    button {
-      background-color: #ff9800; /* Bright orange for buttons */
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      border-radius: 5px; /* Rounded corners */
-      font-size: 1rem; /* Button font size */
-    }
-
-    button:hover {
-      background-color: #e68a00; /* Darker orange on hover */
-      transform: scale(1.05);
-    }
-
-    /* Smooth scroll */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 3rem;
-      }
-      .content-section {
-        padding: 50px 20px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Hudabee</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="parallax hero">
+  <section class="hero">
     <h1>Welcome to my homepage!</h1>
   </section>
 
   <!-- About Section -->
-  <section class="content-section fade-in" id="about">
+  <section class="content-section" id="about">
     <h2>About Me</h2>
     <p>Hey All, I'm Hudabee. I'm a 2nd year student studying B.Tech in Artificial Intelligence and Data Science.</p>
     <p>I'm passionate about using technology to solve real-world problems and make a positive impact on society.</p>
@@ -266,19 +108,17 @@
   </section>
 
   <!-- Projects Section -->
-  <section class="parallax" style="background-image: url('https://i.ibb.co/mNsBvKW/Lyricorator34.jpg');" id="projects">
-    <div class="content-section fade-in">
-      <h2>Projects</h2>
-      <ul class="list-unstyled">
-        <li><a href="#" style="color: #ff9800;">My super duper project</a></li>
-        <li><a href="#" style="color: #ff9800;">A great project arise</a></li>
-        <li><a href="#" style="color: #ff9800;">Huh, I'm thinking to add a new project here!</a></li>
-      </ul>
-    </div>
+  <section class="content-section" id="projects">
+    <h2>Projects</h2>
+    <ul class="list-unstyled">
+      <li><a href="#" style="color: #ff9800;">My super duper project</a></li>
+      <li><a href="#" style="color: #ff9800;">A great project arise</a></li>
+      <li><a href="#" style="color: #ff9800;">Huh, I'm thinking to add a new project here!</a></li>
+    </ul>
   </section>
 
   <!-- Contact Section -->
-  <section class="content-section fade-in" id="contact">
+  <section class="content-section" id="contact">
     <h2>Contact Me</h2>
     <form>
       <label for="name" style="color: #f1f1f1;">Name:</label><br>
@@ -291,57 +131,10 @@
     </form>
   </section>
 
-  <footer class="text-center mt-4" style="color: #f1f1f1;">
+  <footer>
     <p>&copy; 2024 Hudabee</p>
   </footer>
 
-  <!-- GSAP Script for Animations -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
-  <script>
-    // GSAP Animations
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Fade-in animations for content sections
-    gsap.utils.toArray('.content-section').forEach((section) => {
-      gsap.fromTo(section, 
-        { opacity: 0, y: 50 }, 
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 80%',
-            toggleActions: 'play none none none',
-            once: true // Animation only plays once
-          }
-        });
-    });
-
-    // Parallax Scroll Effect for Hero Section
-    gsap.to(".hero", {
-      backgroundPositionY: '50%',
-      scrollTrigger: {
-        trigger: ".hero",
-        scrub: true
-      }
-    });
-
-    // Scroll-triggered navigation highlight
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-      gsap.to(link, {
-        scrollTrigger: {
-          trigger: link.getAttribute('href'),
-          start: 'top center',
-          toggleClass: { targets: link, className: 'active' },
-          end: 'bottom center'
-        }
-      });
-    });
-  </script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
